@@ -1,0 +1,8 @@
+<%= @doctor.name %><br>
+<%= @doctor.specialty %><br>
+<%= @doctor.university %><br>
+<%= @doctor.hospital.name %><br>
+
+<% @doctor.patients.each do |p| %>
+  <%= p.name %><br>
+<% end %>
