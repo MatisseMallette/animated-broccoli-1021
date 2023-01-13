@@ -4,6 +4,6 @@ class Patient < ApplicationRecord
   has_many :doctors, through: :doctor_patients
 
   def self.patients_over_age(age)
-    Patient.where("age > ?", age)
+    Patient.select('*').where("age > ?", age).order("name ASC")
   end
 end
