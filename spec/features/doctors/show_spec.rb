@@ -70,6 +70,5 @@ RSpec.describe 'Doctor Show Page' do
       visit "/doctors/#{@doctor_2.id}" 
       expect(page).to have_content(@patient_1.name)
     end
-
   end
 end

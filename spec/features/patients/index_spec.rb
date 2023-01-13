@@ -21,8 +21,6 @@ RSpec.describe 'Patient Index Page' do
       expect(page).to have_content(@patient_1.name)
       expect(page).to have_content(@patient_2.name)
       expect(page).to_not have_content(@patient_3.name)
-
-      save_and_open_page
       expect(@patient_4.name).to appear_before(@patient_2.name)
       expect(@patient_2.name).to appear_before(@patient_1.name)
     end
