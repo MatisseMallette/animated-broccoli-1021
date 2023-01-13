@@ -1,13 +1,8 @@
 class DoctorsController < ApplicationController 
   def show 
+    # couldn't figure out how to make this work w stronger params
     @doctor = Doctor.find(params[:id])
   end
-
-  # def destroy 
-  #   doctor_patient = DoctorPatient.find(doctor_params[:merchant_id])
-  #   doctor_patient.destroy
-  #   redirect_to "/doctors/#{doctor_params[:id]}"
-  # end
 
 private 
 

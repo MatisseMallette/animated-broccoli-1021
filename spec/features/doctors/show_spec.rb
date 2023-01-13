@@ -12,8 +12,6 @@ RSpec.describe 'Doctor Show Page' do
       @patient_2 = @doctor_1.patients.create!(name: 'Channing', age: 40, hospital_id: @hospital_1.id)
 
       @doctor_patient_1 = DoctorPatient.create(doctor_id: @doctor_2.id, patient_id: @patient_1.id)
-
-      
     end
 
     it 'displays doctor information' do 
