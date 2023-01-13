@@ -3,6 +3,11 @@
 <%= @doctor.university %><br>
 <%= @doctor.hospital.name %><br>
 
-<% @doctor.patients.each do |p| %>
-  <%= p.name %><br>
+
+<% @doctor.doctor_patients.each do |d_p| %>
+  <p>
+    <div id=<%="patient_#{d_p.patient.id}"%>>
+      <%= d_p.patient.name %> <%= button_to 'remove', "/doctors/#{@doctor.id}/doctor_patients/#{d_p.id}", id: d_p.patient.id, method: :delete, params: { "doctor_patient[id]" => "#{d_p.id}" }%>
+    <div>
+  </p>
 <% end %>
